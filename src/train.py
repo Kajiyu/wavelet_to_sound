@@ -69,12 +69,12 @@ def train():
 
     train_datagen = ImageDataGenerator(rescale=1.0 / 255.)
     validation_datagen = ImageDataGenerator(rescale=1.0 / 255.)
-    train_generator = train_datagen.flow(X, y, batch_size=100)
+    train_generator = train_datagen.flow(X, y, batch_size=300)
     validation_generator = validation_datagen.flow(X,y)
 
-    nb_epoch = 5
-    nb_train_samples = 200
-    nb_validation_samples = 100
+    nb_epoch = 2000
+    nb_train_samples = N
+    nb_validation_samples = 600
     old_session = KTF.get_session()
     with tf.Graph().as_default():
         session = tf.Session('')
