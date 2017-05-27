@@ -1,0 +1,6 @@
+imgs/
+wavs/
+data/*.npy
+model/*.json
+model/*.hdf5
+tmp/
