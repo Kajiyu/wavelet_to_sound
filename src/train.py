@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -6,7 +9,6 @@ import json, csv
 import wave
 from PIL import Image
 from scipy import fromstring, int16
-%matplotlib inline
 
 # keras系
 from keras import models
@@ -61,7 +63,7 @@ def set_model(model):
     return model
 
 
-if __name__ == '__main__':
+def train():
     X = np.load('./data/train_X.npy')
     y = np.load('./data/train_y.npy')
 
