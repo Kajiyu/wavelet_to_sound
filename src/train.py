@@ -86,7 +86,7 @@ def train():
         model.summary()
         fpath = './model/weights.hdf5'
         tb_cb = TensorBoard(log_dir="./tensorlog", histogram_freq=1)
-        cp_cb = ModelCheckpoint(filepath = fpath, monitor='val_loss', verbose=1, save_best_only=True, mode='auto')
+        cp_cb = ModelCheckpoint(filepath = fpath, monitor='val_loss', verbose=1, save_best_only=False, mode='auto', save_weights_only=True)
         history = model.fit_generator(train_generator,samples_per_epoch=nb_train_samples, \
                                                         nb_epoch=nb_epoch, validation_data=validation_generator, \
                                                         nb_val_samples=nb_validation_samples,\
