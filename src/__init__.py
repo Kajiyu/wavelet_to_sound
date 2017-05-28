@@ -1,1 +1,2 @@
-from train import train
+from train import train, set_model
+from generate import generate

@@ -5,3 +5,4 @@ model/*.json
 model/*.hdf5
 tmp/
 *.pyc
+output/
